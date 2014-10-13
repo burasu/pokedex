@@ -39,15 +39,16 @@
                 <div class="col-md-6">
                     <img class="avatar center-block" ng-src="img/pokemons/{{pkmCtrl.pokemon.name | lowercase}}.jpg">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" ng-controller="TabsController as tabs">
                     <ul class="nav nav-tabs nav-justified">
-                        <li class="active"><a href="#">Pokédex</a></li>
-                        <li><a href="#">Stats</a></li>
-                        <li><a href="#">Evolution</a></li>
+                        <li ng-class="{ active : tabs.tab === 1 }"><a ng-click="tabs.selectTab(1)">Pokédex</a></li>
+                        <li ng-class="{ active : tabs.tab === 2 }"><a ng-click="tabs.selectTab(2)">Stats</a></li>
+                        <li ng-class="{ active : tabs.tab === 3 }"><a ng-click="tabs.selectTab(3)">Evolution</a></li>
                     </ul>
+                    <!-- Inicializamos la variable tab a 1 por defecto. -->
                     <div class="tab-content">
                         <!-- Pokedex -->
-                        <div>
+                        <div ng-show="tabs.tab === 1">
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <strong>Type</strong>
@@ -76,7 +77,7 @@
                             </ul>
                         </div>
                         <!-- Stats -->
-                        <div>
+                        <div ng-show="tabs.tab === 2">
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <strong>HP</strong>
@@ -109,7 +110,7 @@
                             </ul>
                         </div>
                         <!-- Evolution -->
-                        <div>
+                        <div ng-show="tabs.tab === 3">
                             <div class="text-center" ng-repeat="pokemon in pkmCtrl.pokemon.evolution">
                                 <a href="#">
                                     <img src="img/pokemons/{{pokemon | lowercase}}.jpg" width="160" />

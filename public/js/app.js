@@ -30,4 +30,15 @@
         };
     });
 
+    // Definimos un nuevo controlador para la gestión de las solapas.
+    app.controller('TabsController', function () {
+
+        this.tab = 1;
+
+        this.selectTab = function (tab) {
+            this.tab = tab;
+        };
+
+    });
+
 })();
