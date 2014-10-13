@@ -53,48 +53,11 @@
                         </div>
                         <!-- Stats -->
                         <div ng-show="tabs.tab === 2">
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <strong>HP</strong>
-                                    <span class="badge">{{pkmCtrl.pokemon.stats.hp}}</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Attack</strong>
-                                    <span class="badge">{{pkmCtrl.pokemon.stats.attack}}</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Defense</strong>
-                                    <span class="badge">{{pkmCtrl.pokemon.stats.defense}}</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Special Attack</strong>
-                                    <span class="badge">{{pkmCtrl.pokemon.stats['sp.atk']}}</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Special Defense</strong>
-                                    <span class="badge">{{pkmCtrl.pokemon.stats['sp.def']}}</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Speed</strong>
-                                    <span class="badge">{{pkmCtrl.pokemon.stats.speed}}</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Total</strong>
-                                    <span class="badge">{{pkmCtrl.pokemon.stats.total}}</span>
-                                </li>
-                            </ul>
+                            <pokemon-stats></pokemon-stats>
                         </div>
                         <!-- Evolution -->
                         <div ng-show="tabs.tab === 3">
-                            <div class="text-center" ng-repeat="pokemon in pkmCtrl.pokemon.evolution">
-                                <a href="#">
-                                    <img src="{{pokemon | imageify}}" width="160">
-                                    <p>
-                                        <strong>{{pokemon}}</strong>
-                                    </p>
-                                </a>
-                                <span ng-hide="$last" class="glyphicon glyphicon-arrow-down"></span>
-                            </div>
+                            <pokemon-evolution></pokemon-evolution>
                         </div>
                     </div>
                 </div>

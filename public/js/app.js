@@ -72,8 +72,22 @@
 
     app.directive('pokemonData', function () {
         return {
-            restirct: 'E',
+            restrict: 'E',
             templateUrl: 'partials/pokemon-data.html'
+        };
+    });
+
+    app.directive('pokemonStats', function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/pokemon-stats.html'
+        };
+    });
+
+    app.directive('pokemonEvolution', function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/pokemon-evolution.html'
         };
     });
 
