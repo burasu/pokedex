@@ -45,11 +45,26 @@
     app.controller('CommentsController', function () {
 
         this.comments = [];
+        this.comment = {};
         this.show = false;
 
         this.toggle = function () {
 
             this.show = ! this.show;
+
+        };
+
+        this.anonymousChanged = function () {
+            if (this.comment.anonymous) {
+                this.comment.email = "";
+            }
+        };
+
+        this.addComment = function () {
+
+            this.comments.push(this.comment);
+
+            this.comment = {};
 
         };
 
