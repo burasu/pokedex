@@ -21,8 +21,8 @@
                 hp: 45,
                 attack: 49,
                 defense: 49,
-                "sp.attack": 65,
-                "sp.defense": 65,
+                "sp.atk": 65,
+                "sp.def": 65,
                 speed: 45,
                 total: 318
             },
@@ -37,6 +37,24 @@
 
         this.selectTab = function (tab) {
             this.tab = tab;
+        };
+
+    });
+
+    // Controlador de comentarios
+    app.controller('CommentsController', function () {
+
+    });
+
+
+    // Filtro personalizado para generar automáticamente la url de las imágenes.
+    app.filter('imageify', function () {
+
+        return function (input) {
+
+            var url = "img/pokemons/" + input.toLowerCase() + ".jpg";
+            return url;
+
         };
 
     });
