@@ -1,49 +1,44 @@
-// Función Javascript que se llama a sí misma.
 (function () {
 
-    // El primer argumento es el nombre del modulo y el resto
-    // las dependencias.
-    var app = angular.module('pokedex', [
-        'pokedex.controllers'
-    ]);
+    angular.module('pokedex.directives', [])
 
-    app.directive('pokemonName', function () {
+    .directive('pokemonName', function () {
         return {
             restrict: 'A',
             templateUrl: 'partials/pokemon-name.html'
         };
-    });
+    })
 
-    app.directive('pokemonImage', function () {
+    .directive('pokemonImage', function () {
         return {
             restrict: 'E',
             templateUrl: 'partials/pokemon-image.html'
         };
-    });
+    })
 
-    app.directive('pokemonData', function () {
+    .directive('pokemonData', function () {
         return {
             restrict: 'E',
             templateUrl: 'partials/pokemon-data.html'
         };
-    });
+    })
 
-    app.directive('pokemonStats', function () {
+    .directive('pokemonStats', function () {
         return {
             restrict: 'E',
             templateUrl: 'partials/pokemon-stats.html'
         };
-    });
+    })
 
-    app.directive('pokemonEvolution', function () {
+    .directive('pokemonEvolution', function () {
         return {
             restrict: 'E',
             templateUrl: 'partials/pokemon-evolution.html'
         };
-    });
+    })
 
     // Plantilla de comentarios. Con ella se gestiona también la validación de los mensajes
-    app.directive('pokemonComments', function () {
+    .directive('pokemonComments', function () {
         return {
             restrict: 'E',
             templateUrl: 'partials/pokemon-comments.html',
@@ -77,16 +72,4 @@
         };
     });
 
-    // Filtro personalizado para generar automáticamente la url de las imágenes.
-    app.filter('imageify', function () {
-
-        return function (input) {
-
-            var url = "img/pokemons/" + input.toLowerCase() + ".jpg";
-            return url;
-
-        };
-
-    });
-
-})();
+})()
