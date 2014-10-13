@@ -70,6 +70,20 @@
 
     });
 
+    app.directive('pokemonName', function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/pokemon-name.html'
+        };
+    });
+
+    app.directive('pokemonImage', function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/pokemon-image.html'
+        };
+    });
+
     app.directive('pokemonData', function () {
         return {
             restrict: 'E',

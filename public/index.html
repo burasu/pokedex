@@ -29,15 +29,11 @@
         <!-- pokemon -->
         <div ng-controller="PokemonController as pkmCtrl">
             <div class="page-header">
-                <h1>
-                    {{pkmCtrl.pokemon.name}}
-                    <small>{{pkmCtrl.pokemon.species}}</small>
-                    <span class="label label-primary pull-right">#{{pkmCtrl.pokemon.id}}</span>
-                </h1>
+                <pokemon-name></pokemon-name>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <img class="avatar center-block" ng-src="{{pkmCtrl.pokemon.name | imageify}}">
+                    <pokemon-image></pokemon-image>
                 </div>
                 <!-- Tabs -->
                 <div class="col-md-6" ng-controller="TabsController as tabs">
