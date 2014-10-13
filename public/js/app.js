@@ -70,6 +70,13 @@
 
     });
 
+    app.directive('pokemonData', function () {
+        return {
+            restirct: 'E',
+            templateUrl: 'partials/pokemon-data.html'
+        };
+    });
+
 
     // Filtro personalizado para generar automáticamente la url de las imágenes.
     app.filter('imageify', function () {
