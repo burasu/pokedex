@@ -2,16 +2,31 @@
 
     angular.module('pokedex.filters', [])
 
-    // Filtro personalizado para generar automáticamente la url de las imágenes.
-    .filter('imageify', function () {
+        .filter('normalize', function () {
 
-        return function (input) {
+            return function (input) {
 
-            var url = "img/pokemons/" + input.toLowerCase() + ".jpg";
-            return url;
+                input = input
+                    .replace('♀', 'f')
+                    .replace('♂', 'm')
+                    .replace(/\W+/g, '');
 
-        };
+                return input.toLowerCase();
 
-    });
+            }
+
+        })
+
+        // Filtro personalizado para generar automáticamente la url de las imágenes.
+        .filter('imageify', ['$filter', function ($filter) {
+
+            return function (input) {
+
+                var url = "img/pokemons/" + $filter('normalize')(input) + ".jpg";
+                return url;
+
+            };
+
+        }]);
 
 })()
