@@ -22,6 +22,10 @@
                 templateUrl: 'views/pokemon.html',
                 controller: 'PokemonController',
                 controllerAs: 'pkmCtrl'
+            })
+
+            .otherwise({
+                redirectTo: '/'
             });
 
     }]);
