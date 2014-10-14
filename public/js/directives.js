@@ -4,7 +4,7 @@
 
     .directive('pokemonName', function () {
         return {
-            restrict: 'A',
+            restrict: 'E',
             templateUrl: 'partials/pokemon-name.html'
         };
     })
