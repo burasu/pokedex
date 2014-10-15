@@ -1,9 +1,15 @@
 <div>
     <div class="page-header">
-        <h1>Pokedex</h1>
+        <h1>Pokédex</h1>
     </div>
-    <div ng-repeat="pokemon in pokemons">
-        <pokemon-name></pokemon-name>
-        <pokemon-image></pokemon-image>
+    <div class="pokemon" ng-repeat="pokemon in pokemons">
+        <a href="/#pokemon/{{pokemon.name | normalize}}">
+            <pokemon-name></pokemon-name>
+            <pokemon-image></pokemon-image>
+
+            <div class="text-center">
+                <pokemon-type></pokemon-type>
+            </div>
+        </a>
     </div>
 </div>

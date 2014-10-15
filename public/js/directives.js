@@ -37,6 +37,13 @@
         };
     })
 
+    .directive('pokemonType', function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/pokemon-type.html'
+        };
+    })
+
     // Plantilla de comentarios. Con ella se gestiona también la validación de los mensajes
     .directive('pokemonComments', function () {
         return {
