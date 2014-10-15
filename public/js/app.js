@@ -20,7 +20,7 @@
                 controller: 'PokedexController'
             })
 
-            .when('/pokemon/:id', {
+            .when('/pokemon/:name', {
                 templateUrl: 'views/pokemon.html',
                 controller: 'PokemonController'
             })
