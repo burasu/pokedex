@@ -2,14 +2,11 @@
 
     angular.module('pokedex.controllers', [])
 
-        .controller('PokedexController', ['$scope', '$http', function ($scope, $http) {
+        .controller('PokedexController', ['$scope', 'pokemonService', function ($scope, pokemonService) {
 
-            $scope.pokemons = [];
-
-            $http.get('/pokemons.json')
-                .success(function (data) {
-                    $scope.pokemons = data;
-                });
+            pokemonService.all().then(function(data) {
+                $scope.pokemons = data;
+            });
 
         }])
 

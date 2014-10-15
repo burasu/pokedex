@@ -7,7 +7,8 @@
         'ngRoute',
         'pokedex.controllers',
         'pokedex.directives',
-        'pokedex.filters'
+        'pokedex.filters',
+        'pokedex.services'
     ]);
 
     // Preparamos para configurar las rutas.
