@@ -50,6 +50,13 @@
             };
         })
 
+        .directive('pokemonFilter', function () {
+            return {
+                restrict: 'E',
+                templateUrl: 'partials/pokemon-filter.html'
+            }
+        })
+
         .directive('pokemonComments', ['pokemonService', function (pokemonService) {
             return {
                 restrict: 'E',

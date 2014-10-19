@@ -15,6 +15,10 @@ body {
   margin-bottom: 20px;
 }
 
+h2 {
+    line-height: 42px;
+}
+
 .nav-tabs {
   margin-bottom: 10px;
 }
@@ -23,8 +27,17 @@ body {
   padding: 10px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .type {
   margin-left: 1px;
+}
+
+.type-all {
+    background-color: #000;
+    border: solid 1px #000;
 }
 
 .type-normal {
